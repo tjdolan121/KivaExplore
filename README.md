@@ -2,6 +2,8 @@
 
 ![KivaExplore2](images/KivaExplore2.png?raw=true "KivaExplore2")
 
+</hr>
+
 ![KivaExplore](images/KivaExplore.png?raw=true "KivaExplore")
 
 
@@ -22,5 +24,7 @@ python app.py
 ```
 
 #### This should get the app going.  Please note that some errors may occur because I haven't added images/wordclouds for some of the countries.  As of now, the only countries with images and wordclouds are Afghanistan, Armenia, Albania, Mali, and Yemen.
+
+## Data is sourced from Kiva and is not owned by me.
 
 ### Feel free to message me if you have any questions!
