@@ -17,7 +17,7 @@
 
 #### INSTRUCTIONS:
 
-#### To run this app locally, clone the repository first.  Then, in the project-level directory, type:
+#### To run this app locally, clone the repository first.  Activate a virtual environment, then use pip to install the requirements.  Then, in the project-level directory, type:
 
 ```
 python app.py
