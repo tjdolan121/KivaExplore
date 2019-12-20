@@ -52,8 +52,8 @@ app.layout = \
                     dcc.Dropdown(
                         id="Metrics",
                         options=[
-                            {'label': 'MPI  ', 'value': 'MPI'},
-                            {'label': 'Gender  ', 'value': 'Genders'},
+                            {'label': 'Multidimensional Poverty Index (MPI)', 'value': 'MPI'},
+                            {'label': 'Gender Inequality Index (GII)', 'value': 'GII'},
                         ],
                         value='MPI',
                         style={"padding-left": "400px", "padding-right": "400px"}
@@ -202,7 +202,7 @@ def update_choropleth(selector):
                 'title': 'MPI by Country'
             }
         }
-    elif selector == "Genders":
+    else:
         return {
             'data': [
                 go.Choropleth(
@@ -213,23 +213,9 @@ def update_choropleth(selector):
                     text=totals_df['country']
                 )],
             'layout': {
-                'title': 'Female Representation by Country'
-            }
-        }
-    else:
-        return {
-            'data': [
-                go.Scatter(
-                    x=totals_df['GII'],
-                    y=totals_df['MPI'],
-                    text=totals_df['ISO'],
-                    mode='markers',
-                    opacity=0.7,
-                    marker={
-                        'size': 7,
-                        'line': {'width': 0.2, 'color': 'white'}})],
-            'layout': {
-                'title': 'GII vs. MPI'
+                'height': 800,
+                'width': 1300,
+                'title': 'GII by Country'
             }
         }
 
@@ -284,6 +270,7 @@ def update_scatter(clickData):
             xaxis={'title': 'Gender Inequality Index'},
             yaxis={'title': 'Multidimensional Poverty Index'},
             hovermode='closest',
+            showlegend=False,
         )
     }
 
